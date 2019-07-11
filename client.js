@@ -5,9 +5,9 @@ var endpoint = 'http://localhost:3030/shops/query';
 // Get the leaderName(s) of the given citys
 // if you do not bind any city, it returns 10 random leaderNames
 
-var query1 = 'SELECT DISTINCT ?country \
+var query1 = 'SELECT count(*) \
 WHERE { \
-  ?subject <http://linkedgeodata.org/ontology/addr%3Acountry> ?country \
+  ?subject <http://linkedgeodata.org/ontology/addr%3Acountry> \"DE\" \
 } \
 LIMIT 100 '
 var query2 = "SELECT * FROM <http://dbpedia.org> WHERE { \
